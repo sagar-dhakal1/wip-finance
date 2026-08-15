@@ -1270,3 +1270,26 @@ main,
   text-transform: uppercase;
   color: var(--primary-c);
 }
+
+/* anchor scroll offset for sticky ticker + header */
+html { scroll-padding-top: 110px; }
+main section[id], main [id] { scroll-margin-top: 110px; }
+
+/* decorative hero layers must never swallow clicks on the sticky nav */
+.grid-bg,
+.chart-backdrop,
+.chart-backdrop svg,
+.feature-spark {
+  pointer-events: none;
+}
+.site-header .nav a {
+  position: relative;
+  z-index: 1;
+}
+
+/* keep the header sticky above the hero (a later rule reset it to relative) */
+.site-header {
+  position: sticky;
+  top: 33px;
+  z-index: 40;
+}

@@ -1,22 +1,16 @@
-# Sagar — Personal Website (Static)
+# Sagar — Finance and Fiction (static site)
 
-Plain HTML/CSS/JS. Drop into GitHub and turn on Pages.
-
-## Run locally
-Just open `index.html` in a browser. Or:
-
-```
-python3 -m http.server 8080
-```
-
-## Deploy to GitHub Pages
-1. Create a new repo on GitHub.
-2. Upload every file (including `.nojekyll`).
-3. Settings → Pages → Source: `main` branch, `/` folder.
-4. Done — your site will be live at `https://<username>.github.io/<repo>/`.
+Fully static: `index.html` contains all content (every section, including
+02 / Projects and 03 / Focus). Nothing is injected by JavaScript, so the page
+renders identically on GitHub Pages, Netlify, or by double-clicking the file.
 
 ## Files
-- `index.html` — Home (hero + knowledge garden + quotes)
-- `about.html`, `projects.html`, `experience.html`, `books.html`, `research.html`, `learning.html`, `contact.html`
+- `index.html` — the whole page
 - `styles.css` — all styling
-- `script.js` — ticker drift, knowledge garden, quote rotator, mobile menu
+- `script.js` — optional polish only (rotating quotes, scroll progress,
+  reveal animations, offset-aware smooth anchor scrolling)
+- `assets/about-portrait.jpg` — About section image
+
+## Deploy on GitHub Pages
+1. Push these files to the repository root (keep `assets/` alongside `index.html`).
+2. Settings → Pages → Source: `Deploy from a branch`, branch `main`, folder `/ (root)`.

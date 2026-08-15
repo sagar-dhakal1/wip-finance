@@ -4,255 +4,57 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sagar — Finance and Fiction</title>
-    <meta
-      name="description"
-      content="Personal site of Sagar, an Accounting & Finance student. Projects, research, experience, and a reading shelf — learning in public."
-    />
+    <meta name="description" content="Personal site of Sagar, an Accounting &amp; Finance student. Projects, research, experience, and a reading shelf — learning in public." />
     <meta name="author" content="Sagar" />
     <meta property="og:title" content="Sagar — Finance and Fiction" />
-    <meta
-      property="og:description"
-      content="An Accounting & Finance student documenting what he's reading, learning, and building."
-    />
+    <meta property="og:description" content="An Accounting &amp; Finance student documenting what he's reading, learning, and building." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+    
+<link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- scroll progress + ambient orbs -->
-    <div class="scroll-progress" aria-hidden="true"><span id="progress-bar"></span></div>
-    <div class="flow-orbs" aria-hidden="true">
-      <span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span>
-    </div>
+<div class="scroll-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+<div class="flow-orbs" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>
+<div class="ticker-wrap" aria-hidden="true"><div class="ticker" id="ticker"><span class="item"><span class="sym">S&amp;P 500</span>5832.10 <span class="up">▲ 0.42%</span></span><span class="item"><span class="sym">NASDAQ</span>18966.13 <span class="up">▲ 0.81%</span></span><span class="item"><span class="sym">DOW</span>43210.45 <span class="down">▼ 0.12%</span></span><span class="item"><span class="sym">BTC</span>67430.20 <span class="up">▲ 1.24%</span></span><span class="item"><span class="sym">ETH</span>3520.18 <span class="up">▲ 0.66%</span></span><span class="item"><span class="sym">GOLD</span>2710.30 <span class="up">▲ 0.18%</span></span><span class="item"><span class="sym">OIL</span>70.45 <span class="down">▼ 0.55%</span></span><span class="item"><span class="sym">EUR/USD</span>1.0842 <span class="up">▲ 0.05%</span></span><span class="item"><span class="sym">USD/JPY</span>154.22 <span class="down">▼ 0.21%</span></span><span class="item"><span class="sym">10Y YIELD</span>4.31% <span class="up">▲ 0.03%</span></span><span class="item"><span class="sym">VIX</span>15.62 <span class="down">▼ 1.10%</span></span><span class="item"><span class="sym">AAPL</span>232.18 <span class="up">▲ 0.92%</span></span><span class="item"><span class="sym">MSFT</span>418.55 <span class="up">▲ 0.34%</span></span><span class="item"><span class="sym">NVDA</span>142.10 <span class="up">▲ 2.15%</span></span><span class="item"><span class="sym">BRK.B</span>462.30 <span class="up">▲ 0.41%</span></span><span class="item"><span class="sym">S&amp;P 500</span>5832.10 <span class="up">▲ 0.42%</span></span><span class="item"><span class="sym">NASDAQ</span>18966.13 <span class="up">▲ 0.81%</span></span><span class="item"><span class="sym">DOW</span>43210.45 <span class="down">▼ 0.12%</span></span><span class="item"><span class="sym">BTC</span>67430.20 <span class="up">▲ 1.24%</span></span><span class="item"><span class="sym">ETH</span>3520.18 <span class="up">▲ 0.66%</span></span><span class="item"><span class="sym">GOLD</span>2710.30 <span class="up">▲ 0.18%</span></span><span class="item"><span class="sym">OIL</span>70.45 <span class="down">▼ 0.55%</span></span><span class="item"><span class="sym">EUR/USD</span>1.0842 <span class="up">▲ 0.05%</span></span><span class="item"><span class="sym">USD/JPY</span>154.22 <span class="down">▼ 0.21%</span></span><span class="item"><span class="sym">10Y YIELD</span>4.31% <span class="up">▲ 0.03%</span></span><span class="item"><span class="sym">VIX</span>15.62 <span class="down">▼ 1.10%</span></span><span class="item"><span class="sym">AAPL</span>232.18 <span class="up">▲ 0.92%</span></span><span class="item"><span class="sym">MSFT</span>418.55 <span class="up">▲ 0.34%</span></span><span class="item"><span class="sym">NVDA</span>142.10 <span class="up">▲ 2.15%</span></span><span class="item"><span class="sym">BRK.B</span>462.30 <span class="up">▲ 0.41%</span></span></div></div>
 
-    <!-- ticker -->
-    <div class="ticker-wrap" aria-hidden="true">
-      <div class="ticker" id="ticker"></div>
-    </div>
+<header class="site-header"><div class="container header-inner"><nav class="nav"><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#books">Books</a><a href="#contact">Contact</a></nav></div></header>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <nav class="nav">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#research">Research</a>
-          <a href="#books">Books</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+<main id="top">
+<section class="hero"><div class="grid-bg" aria-hidden="true"></div><div class="chart-backdrop" aria-hidden="true"><svg viewBox="0 0 1200 400" preserveAspectRatio="none"><defs>
+<linearGradient id="g1" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity="0.35"></stop><stop offset="100%" stop-color="#34d399" stop-opacity="0"></stop></linearGradient></defs><path d="M0,300 L80,260 L160,280 L240,210 L320,230 L400,170 L480,200 L560,140 L640,165 L720,100 L800,135 L880,80 L960,110 L1040,55 L1120,90 L1200,40 L1200,400 L0,400 Z" fill="url(#g1)"></path><path d="M0,300 L80,260 L160,280 L240,210 L320,230 L400,170 L480,200 L560,140 L640,165 L720,100 L800,135 L880,80 L960,110 L1040,55 L1120,90 L1200,40" fill="none" stroke="#34d399" stroke-width="1.5"></path><path class="dash" d="M0,330 L100,320 L200,340 L300,300 L400,310 L500,270 L600,290 L700,250 L800,265 L900,225 L1000,245 L1100,200 L1200,215" fill="none" stroke="#fbbf24" stroke-width="1"></path><g fill="#34d399"><circle cx="320" cy="230" r="2.5" class="pulse"></circle><circle cx="720" cy="100" r="2.5" class="pulse"></circle><circle cx="1040" cy="55" r="2.5" class="pulse"></circle></g></svg></div><div class="container hero-inner"><h1 class="hero-title">Hi, I'm Sagar.<span class="accent">I study Accounting and Finance.</span></h1><p class="hero-sub">I document what I'm reading, learning, and building as I explore how capital, companies, and stories shape the world. This site is my slowly-growing digital garden.</p><div class="cta-row"><a class="btn btn-primary" href="#projects">View Projects →</a><a class="btn btn-ghost" href="https://substack.com/@sagar5" target="_blank" rel="noreferrer">Read Research</a></div></div></section>
+<section id="about" class="section">
+<div class="container"><p class="eyebrow">01 / About</p><h2 class="section-title">Learning how capital, companies, and code<br>shape the world.</h2><div class="about-grid"><div class="prose"><p>I'm an undergraduate at <strong>The Hong Kong Polytechnic University</strong>, interested in the business and financial world.</p><p>My experience so far has taken me across different areas from business development and research to tutoring, student engagement, and working with teams on new ideas. I enjoy learning by doing, asking questions, and putting myself in unfamiliar situations where there's something new to figure out.</p><p>For now, I'm focused on building strong fundamentals, becoming a better problem solver and communicator, and making the most of the opportunities I get along the way.</p></div><div class="photo-slot"><img src="assets/about-portrait.jpg" alt="Open financial ledger and fountain pen under warm lamplight" loading="lazy" width="900" height="1100"><span class="frame-mark tl"></span><span class="frame-mark tr"></span><span class="frame-mark bl"></span><span class="frame-mark br"></span></div></div></div></section>
+<section id="projects" class="spotlight">
+<div class="container"><div class="spotlight-head"><div><p class="eyebrow">02 / Projects</p><h2 class="section-title">Models, dashboards, and research work</h2></div></div>
+<article class="card feature-card"><div><p class="kicker">Featured build</p><h3>Global Valuation Monitor</h3><p>Tracks global market valuations using real-time economic and financial data to identify relatively expensive and undervalued markets.</p><div class="feature-tags"><span class="chip">Valuation</span><span class="chip">Macro</span><span class="chip">Data</span><span class="chip">Ready soon</span></div></div><div class="feature-spark" aria-hidden="true"><svg viewBox="0 0 300 130" preserveAspectRatio="none"><defs>
+<linearGradient id="sp" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#34d399" stop-opacity="0.4"></stop><stop offset="100%" stop-color="#34d399" stop-opacity="0"></stop></linearGradient></defs><path d="M0,110 L40,95 L80,100 L120,70 L160,80 L200,45 L240,60 L300,20 L300,130 L0,130 Z" fill="url(#sp)"></path><path d="M0,110 L40,95 L80,100 L120,70 L160,80 L200,45 L240,60 L300,20" fill="none" stroke="#34d399" stroke-width="1.5"></path></svg></div></article><div class="grid-3"><div class="card"><h3>Coming soon</h3><p>Something is in the works here. I'd rather leave it blank than fill it with noise.</p><p class="kicker" style="margin-top:14px;margin-bottom:0">In progress</p></div><div class="card"><h3>Coming soon</h3><p>A second idea still taking shape. It'll show up once it's worth reading.</p><p class="kicker" style="margin-top:14px;margin-bottom:0">In progress</p></div></div></div></section>
+<section class="section">
+<div class="container"><p class="eyebrow">03 / Focus</p><h2 class="section-title">What I love exploring</h2><div class="grid-4"><div class="card"><h3>Financial Analysis</h3><p>My lens for understanding the world, through ratios, models, and the narrative behind every number.</p></div><div class="card"><h3>Investing</h3><p>How I think about patience, risk, and compounding in markets and in life.</p></div><div class="card"><h3>Corporate Finance</h3><p>Capital structure, M&amp;A, and the decisions that move money inside companies.</p></div><div class="card"><h3>Accounting</h3><p>The language of business. I read footnotes the way others read headlines.</p></div><div class="card"><h3>Economics</h3><p>Why things cost what they cost, and where the world might be heading next.</p></div><div class="card"><h3>Technology</h3><p>AI, fintech, and the platforms quietly reshaping how we live and invest.</p></div><div class="card"><h3>Books</h3><p>Fiction and non-fiction. I believe in compounding knowledge, not just capital.</p></div><div class="card"><h3>Data Analysis</h3><p>Excel, SQL, and Python for turning curiosity into better questions.</p></div></div></div></section>
+<section id="experience" class="section">
+<div class="container"><p class="eyebrow">04 / Experience</p><h2 class="section-title">Where I've learned by doing</h2>
+<ol class="timeline">
+<li><div class="when">2025 — Present</div><h3>Independent Research</h3><p>Exploring companies, markets, and ideas, then publishing what I learn.</p></li>
+<li><div class="when">2024 — Present</div><h3>Student Ambassador, PolyU</h3><p>Supported online student information sessions by sharing insights on university life and academics.</p></li>
+<li><div class="when">2024 — 2025</div><h3>Student Liaison &amp; Recruitment Executive, Advanced Case Competition Club</h3><p>Revamped LinkedIn strategy, achieving 60%+ follower growth through the “Case Preparation Series.”</p></li>
+<li><div class="when">Spring 2025</div><h3>Business Development Intern, Tsunami Advisors Limited</h3><p>Automated research workflows, reducing manual effort by 60–80% and enabling scalable analysis across 50+ organizations.</p></li></ol></div></section>
+<section id="research" class="section">
+<div class="container"><p class="eyebrow">05 / Research</p><h2 class="section-title">Essays on markets, companies, and ideas</h2><div class="list"><a class="row" href="https://substack.com/profile/290631586-sagar/note/c-314713990?utm_source=substack&amp;utm_content=first-note-modal" target="_blank" rel="noreferrer"><h3>First Post</h3><span class="meta">0 min read · subject</span></a><a class="row" href="#research"><h3>Coming Soon</h3><span class="meta">0 min read · subject</span></a><a class="row" href="#research"><h3>Coming Soon</h3><span class="meta">0 min read · subject</span></a><a class="row" href="#research"><h3>Coming Soon</h3><span class="meta">0 min read · subject</span></a><a class="row" href="#research"><h3>Coming Soon</h3><span class="meta">0 min read · subject</span></a></div></div></section>
+<section id="books" class="section">
+<div class="container"><p class="eyebrow">06 / Books</p><h2 class="section-title">A compounding library</h2><div class="bookshelf-wrap"><div class="bookshelf"><a class="shelf-bookmark" href="https://app.thestorygraph.com/profile/sagar_reads" target="_blank" rel="noreferrer"><span class="bm-label">sagar_reads</span><span class="bm-sub">StoryGraph ↗</span><span class="bm-tail" aria-hidden="true"></span></a><div class="shelf-columns"><div class="shelf-row"><div class="shelf-books"><div class="book-spine finance p0" tabindex="0" aria-label="Freakonomics by Levitt &amp; Dubner"><span class="spine-cap" aria-hidden="true"></span><span class="spine-band" aria-hidden="true"></span><span class="spine-rule" aria-hidden="true"></span><span class="spine-crest" aria-hidden="true"></span><span class="book-tip"><strong>Freakonomics</strong><em>Levitt &amp; Dubner</em><span class="tip-status">Finished</span></span></div><div class="book-spine finance p1" tabindex="0" aria-label="Rich Dad Poor Dad by Robert Kiyosaki"><span class="spine-cap" aria-hidden="true"></span><span class="spine-band" aria-hidden="true"></span><span class="spine-rule" aria-hidden="true"></span><span class="spine-crest" aria-hidden="true"></span><span class="book-tip"><strong>Rich Dad Poor Dad</strong><em>Robert Kiyosaki</em><span class="tip-status">Finished</span></span></div><div class="book-spine fiction p2" tabindex="0" aria-label="Fahrenheit 451 by Ray Bradbury"><span class="spine-cap" aria-hidden="true"></span><span class="spine-band" aria-hidden="true"></span><span class="spine-rule" aria-hidden="true"></span><span class="spine-crest" aria-hidden="true"></span><span class="book-tip"><strong>Fahrenheit 451</strong><em>Ray Bradbury</em><span class="tip-status">Fiction</span></span></div><div class="book-spine reading p3" tabindex="0" aria-label="Deep Work by Cal Newport"><span class="spine-cap" aria-hidden="true"></span><span class="spine-band" aria-hidden="true"></span><span class="spine-rule" aria-hidden="true"></span><span class="spine-crest" aria-hidden="true"></span><span class="book-tip"><strong>Deep Work</strong><em>Cal Newport</em><span class="tip-status">Reading</span></span></div></div><div class="shelf-plank" aria-hidden="true"></div></div><div class="shelf-row"><div class="shelf-books"><div class="book-spine fiction p1" tabindex="0" aria-label="Crime and Punishment by Fyodor Dostoevsky"><span class="spine-cap" aria-hidden="true"></span><span class="spine-band" aria-hidden="true"></span><span class="spine-rule" aria-hidden="true"></span><span class="spine-crest" aria-hidden="true"></span><span class="book-tip"><strong>Crime and Punishment</strong><em>Fyodor Dostoevsky</em><span class="tip-status">Fiction</span></span></div><div class="book-spine fiction p2" tabindex="0" aria-label="Norwegian Wood by Haruki Murakami"><span class="spine-cap" aria-hidden="true"></span><span class="spine-band" aria-hidden="true"></span><span class="spine-rule" aria-hidden="true"></span><span class="spine-crest" aria-hidden="true"></span><span class="book-tip"><strong>Norwegian Wood</strong><em>Haruki Murakami</em><span class="tip-status">Fiction</span></span></div><div class="book-spine fiction p3" tabindex="0" aria-label="The Midnight Library by Matt Haig"><span class="spine-cap" aria-hidden="true"></span><span class="spine-band" aria-hidden="true"></span><span class="spine-rule" aria-hidden="true"></span><span class="spine-crest" aria-hidden="true"></span><span class="book-tip"><strong>The Midnight Library</strong><em>Matt Haig</em><span class="tip-status">Fiction</span></span></div><div class="book-spine reading p0" tabindex="0" aria-label="The Alchemist by Paulo Coelho"><span class="spine-cap" aria-hidden="true"></span><span class="spine-band" aria-hidden="true"></span><span class="spine-rule" aria-hidden="true"></span><span class="spine-crest" aria-hidden="true"></span><span class="book-tip"><strong>The Alchemist</strong><em>Paulo Coelho</em><span class="tip-status">Finished</span></span></div></div><div class="shelf-plank" aria-hidden="true"></div></div></div></div></div></div></section>
+<section class="section">
+<div class="container"><p class="eyebrow">07 / Marginalia</p><h2 class="section-title">Lines I keep coming back to</h2><div class="card quote-card"><div class="quote-mark">"</div><blockquote><p class="quote-text">The stock market is a device for transferring money from the impatient to the patient.</p>
+<footer class="quote-author mono">— Warren Buffett</footer></blockquote><div class="quote-dots"><button aria-label="Quote 1" class="on"></button><button aria-label="Quote 2"></button><button aria-label="Quote 3"></button><button aria-label="Quote 4"></button><button aria-label="Quote 5"></button></div></div></div></section>
+<section id="contact" class="section">
+<div class="container"><p class="eyebrow">08 / Contact</p><h2 class="section-title">Let's talk markets, companies, or ideas.</h2><p class="hero-sub" style="margin-bottom: 28px; transition-delay: 120ms;">Open to internships, research collaborations, and unhurried conversation.</p><div class="grid-2"><a class="card contact-card" href="mailto:sagar.dhakal@connect.polyu.hk" target="_blank" rel="noreferrer"><div><div class="label">Email</div><div class="val">sagar.dhakal@connect.polyu.hk</div></div><span class="arrow">→</span></a><a class="card contact-card" href="https://linkedin.com/in/sagardhakal99" target="_blank" rel="noreferrer"><div><div class="label">LinkedIn</div><div class="val">linkedin.com/in/sagardhakal99</div></div><span class="arrow">→</span></a></div></div></section></main>
 
-    <main id="top">
-      <!-- HERO -->
-      <section class="hero">
-        <div class="grid-bg" aria-hidden="true"></div>
-        <div class="chart-backdrop" aria-hidden="true">
-          <svg viewBox="0 0 1200 400" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
-                <stop offset="0%" stop-color="#34d399" stop-opacity="0.35" />
-                <stop offset="100%" stop-color="#34d399" stop-opacity="0" />
-              </linearGradient>
-            </defs>
-            <path
-              d="M0,300 L80,260 L160,280 L240,210 L320,230 L400,170 L480,200 L560,140 L640,165 L720,100 L800,135 L880,80 L960,110 L1040,55 L1120,90 L1200,40 L1200,400 L0,400 Z"
-              fill="url(#g1)"
-            />
-            <path
-              d="M0,300 L80,260 L160,280 L240,210 L320,230 L400,170 L480,200 L560,140 L640,165 L720,100 L800,135 L880,80 L960,110 L1040,55 L1120,90 L1200,40"
-              fill="none"
-              stroke="#34d399"
-              stroke-width="1.5"
-            />
-            <path
-              class="dash"
-              d="M0,330 L100,320 L200,340 L300,300 L400,310 L500,270 L600,290 L700,250 L800,265 L900,225 L1000,245 L1100,200 L1200,215"
-              fill="none"
-              stroke="#fbbf24"
-              stroke-width="1"
-            />
-            <g fill="#34d399">
-              <circle cx="320" cy="230" r="2.5" class="pulse" />
-              <circle cx="720" cy="100" r="2.5" class="pulse" />
-              <circle cx="1040" cy="55" r="2.5" class="pulse" />
-            </g>
-          </svg>
-        </div>
-
-        <div class="container hero-inner">
-          <h1 class="hero-title">
-            Hi, I'm Sagar.
-            <span class="accent">I study Accounting and Finance.</span>
-          </h1>
-          <p class="hero-sub">
-            I document what I'm reading, learning, and building as I explore how capital, companies,
-            and stories shape the world. This site is my slowly-growing digital garden.
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#projects">View Projects →</a>
-            <a class="btn btn-ghost" href="https://substack.com/@sagar5" target="_blank" rel="noreferrer">
-              Read Research
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- 01 ABOUT -->
-      <section id="about" class="section">
-        <div class="container">
-          <p class="eyebrow">01 / About</p>
-          <h2 class="section-title">
-            Learning how capital, companies, and code<br />shape the world.
-          </h2>
-          <div class="about-grid">
-            <div class="prose">
-              <p>
-                I'm an undergraduate at <strong>The Hong Kong Polytechnic University</strong>,
-                interested in the business and financial world.
-              </p>
-              <p>
-                My experience so far has taken me across different areas from business development
-                and research to tutoring, student engagement, and working with teams on new ideas. I
-                enjoy learning by doing, asking questions, and putting myself in unfamiliar
-                situations where there's something new to figure out.
-              </p>
-              <p>
-                For now, I'm focused on building strong fundamentals, becoming a better problem
-                solver and communicator, and making the most of the opportunities I get along the
-                way.
-              </p>
-            </div>
-            <div class="photo-slot">
-              <img
-                src="assets/about-portrait.jpg"
-                alt="Open financial ledger and fountain pen under warm lamplight"
-                loading="lazy"
-                width="900"
-                height="1100"
-              />
-              <span class="frame-mark tl"></span>
-              <span class="frame-mark tr"></span>
-              <span class="frame-mark bl"></span>
-              <span class="frame-mark br"></span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 02 PROJECTS -->
-      <section id="projects" class="spotlight">
-        <div class="container">
-          <div class="spotlight-head">
-            <div>
-              <p class="eyebrow">02 / Projects</p>
-              <h2 class="section-title">Models, dashboards, and research work</h2>
-            </div>
-          </div>
-
-          <article class="card feature-card">
-            <div>
-              <p class="kicker">Featured build</p>
-              <h3 id="featured-title"></h3>
-              <p id="featured-desc"></p>
-              <div class="feature-tags" id="featured-tags"></div>
-            </div>
-            <div class="feature-spark" aria-hidden="true">
-              <svg viewBox="0 0 300 130" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="sp" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stop-color="#34d399" stop-opacity="0.4" />
-                    <stop offset="100%" stop-color="#34d399" stop-opacity="0" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M0,110 L40,95 L80,100 L120,70 L160,80 L200,45 L240,60 L300,20 L300,130 L0,130 Z"
-                  fill="url(#sp)"
-                />
-                <path
-                  d="M0,110 L40,95 L80,100 L120,70 L160,80 L200,45 L240,60 L300,20"
-                  fill="none"
-                  stroke="#34d399"
-                  stroke-width="1.5"
-                />
-              </svg>
-            </div>
-          </article>
-
-          <div class="grid-3" id="projects-grid"></div>
-        </div>
-      </section>
-
-      <!-- 03 FOCUS -->
-      <section class="section">
-        <div class="container">
-          <p class="eyebrow">03 / Focus</p>
-          <h2 class="section-title">What I love exploring</h2>
-          <div class="grid-4" id="interests-grid"></div>
-        </div>
-      </section>
-
-      <!-- 04 EXPERIENCE -->
-      <section id="experience" class="section">
-        <div class="container">
-          <p class="eyebrow">04 / Experience</p>
-          <h2 class="section-title">Where I've learned by doing</h2>
-          <ol class="timeline" id="timeline"></ol>
-        </div>
-      </section>
-
-      <!-- 05 RESEARCH -->
-      <section id="research" class="section">
-        <div class="container">
-          <p class="eyebrow">05 / Research</p>
-          <h2 class="section-title">Essays on markets, companies, and ideas</h2>
-          <div class="list" id="research-list"></div>
-        </div>
-      </section>
-
-      <!-- 06 BOOKS -->
-      <section id="books" class="section">
-        <div class="container">
-          <p class="eyebrow">06 / Books</p>
-          <h2 class="section-title">A compounding library</h2>
-          <div id="bookshelf"></div>
-        </div>
-      </section>
-
-      <!-- 07 MARGINALIA -->
-      <section class="section">
-        <div class="container">
-          <p class="eyebrow">07 / Marginalia</p>
-          <h2 class="section-title">Lines I keep coming back to</h2>
-          <div id="quotes"></div>
-        </div>
-      </section>
-
-      <!-- 08 CONTACT -->
-      <section id="contact" class="section">
-        <div class="container">
-          <p class="eyebrow">08 / Contact</p>
-          <h2 class="section-title">Let's talk markets, companies, or ideas.</h2>
-          <p class="hero-sub" style="margin-bottom: 28px">
-            Open to internships, research collaborations, and unhurried conversation.
-          </p>
-          <div class="grid-2" id="links-grid"></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p class="mono muted">© <span id="year"></span> Sagar Dhakal</p>
-      </div>
-    </footer>
-
+<footer class="site-footer"><div class="container footer-inner"><p class="mono muted">© 2026 Sagar Dhakal</p></div></footer>
     <script src="script.js"></script>
   </body>
 </html>
